@@ -77,7 +77,12 @@
                 <div>Tip Amount: <span id="tipDisplay">${tipAmount}%</span></div>`
                 breakdown.style.display = 'block'
             }
-            calCulateBtn.addEventListener('click', calculateTotalBill)
+            calCulateBtn.addEventListener("click", calculateTotalBill)
+            document.addEventListener("keydown", (e) => {
+                if (e.key === 'Enter') {
+                    calculateTotalBill()
+                }
+            })
         })
     </script>
 </body>
